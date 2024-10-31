@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Basic styling */
+        body { font-family: Arial, sans-serif; background-color: #f3f4f6; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .main-content { width: 50%; max-width: 800px; display: flex; border-radius: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); overflow: hidden; background-color: #fff; }
+        .company__info { background-color: #333333; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; color: #fff; text-align: center; }
+        .company__info img { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 10px; }
+        .company_title { font-size: 1.2em; font-weight: bold; }
+        .login_form { width: 60%; padding: 2em; background-color: #fff; }
+        .login_form h2 { color: #333333; margin-bottom: 1.5em; text-align: center; font-size: 1.8em; }
+        .form__input { width: 100%; padding: 1em; margin: 1em 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .form__input:focus { border-color: #008080; outline: none; box-shadow: 0 0 5px rgba(0, 128, 128, 0.3); }
+        .remember { display: flex; align-items: center; margin: 1em 0; }
+        .remember input { margin-right: 0.5em; }
+        .btn { width: 100%; padding: 0.8em; background-color: #333333; color: #fff; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .btn:hover { background-color: #006666; }
+        @media screen and (max-width: 640px) { .main-content { flex-direction: column; width: 90%; } .company__info, .login_form { width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="company__info">
+            <img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-6/455041990_911393857674308_9135799122053590255_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF9ohVAm_8_rrcG70V5LRPbMNMC5zspmAYw0wLnOymYBtbYmoJX0YIy3rr2JLc2ty8QWxxI6IeUvCLgzTBC4BRH&_nc_ohc=vMloPAIzT2wQ7kNvgFct2HV&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_gid=Am4UdESzd7ysn3eJpuEGbn4&oh=00_AYC2vbIq5CSCQxb1OKx1gdUXNQp6b6QDGcqtXtTQNkya0A&oe=671E4252" alt="Company Logo">
+            <h4 class="company_title">Vtrends.mlfp</h4>
+        </div>
+        <div class="login_form">
+            <h2>Log In</h2>
+            <form action="index.php" method="POST"> <!-- Send form data to index.php -->
+                <input type="text" name="username" id="username" class="form__input" placeholder="Username" required>
+                <input type="password" name="password" id="password" class="form__input" placeholder="Password" required>
+                <div class="remember">
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    <label for="remember_me">Remember Me!</label>
+                </div>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
